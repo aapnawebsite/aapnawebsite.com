@@ -1,12 +1,12 @@
 # 🚀 aapnawebsite.com
 
 [![Website](https://img.shields.io/badge/Live_Website-aapnawebsite.com-blueviolet?style=for-the-badge&logo=googlechrome&logoColor=white)](https://aapnawebsite.com/)
-[![GitHub](https://img.shields.io/badge/GitHub-sanmitjena-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sanmitjena)
+[![GitHub](https://img.shields.io/badge/GitHub-aapnawebsite%2Faapnawebsite.com-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aapnawebsite/aapnawebsite.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Sanmit_Jena-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/sanmit-jena-7294b8155)
 [![License](https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge)](#license)
 
 > **Modern, High-Performance Web Platform & Development Solutions**  
-> Tailored, responsive web design and digital systems engineered by **Sanmit Jena**.
+> Tailored, responsive web design and digital systems engineered for business growth.
 
 ---
 
@@ -42,7 +42,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/sanmitjena/aapnawebsite.com.git
+git clone https://github.com/aapnawebsite/aapnawebsite.com.git
 
 # Navigate into the project directory
 cd aapnawebsite.com
@@ -53,12 +53,12 @@ start index.html
 
 ---
 
-## 👨‍💻 Developer & Author
+## 👨‍💻 Author & Repository
 
-**Sanmit Jena**  
-- **GitHub:** [@sanmitjena](https://github.com/sanmitjena)
-- **LinkedIn:** [Sanmit Jena](https://linkedin.com/in/sanmit-jena-7294b8155)
-- **Website:** [aapnawebsite.com](https://aapnawebsite.com/)
+- **Official Repository:** [https://github.com/aapnawebsite/aapnawebsite.com](https://github.com/aapnawebsite/aapnawebsite.com)
+- **Organization / Profile:** [@aapnawebsite](https://github.com/aapnawebsite)
+- **Developer:** [Sanmit Jena](https://github.com/sanmitjena) ([LinkedIn](https://linkedin.com/in/sanmit-jena-7294b8155))
+- **Live Website:** [aapnawebsite.com](https://aapnawebsite.com/)
 - **Email:** [aapnawebsite@gmail.com](mailto:aapnawebsite@gmail.com)
 
 ---
