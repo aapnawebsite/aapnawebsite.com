@@ -32,6 +32,57 @@
     spinner();
 
 
+    
+    // Device Mockup Switcher (Desktop / Tablet / Mobile)
+    $(document).on('click', '.device-tab', function () {
+        $('.device-tab').removeClass('active');
+        $(this).addClass('active');
+        var view = $(this).data('view');
+        var $screen = $('#laptop-screen-view');
+        $screen.removeClass('view-tablet view-mobile');
+        if (view === 'tablet') {
+            $screen.addClass('view-tablet');
+        } else if (view === 'mobile') {
+            $screen.addClass('view-mobile');
+        }
+    });
+
+    // Animated Stats Counter on Scroll
+    var hasRunCounters = false;
+    var runStatsCounters = function () {
+        if (hasRunCounters) return;
+        var statsSection = $('.stats-strip');
+        if (statsSection.length === 0) return;
+        var rect = statsSection[0].getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.9) {
+            hasRunCounters = true;
+            $('.stat-number').each(function () {
+                var $this = $(this);
+                var fullText = $this.text().trim();
+                var num = parseFloat(fullText.replace(/[^0-9.]/g, ''));
+                var suffix = fullText.replace(/[0-9.]/g, '');
+                if (!isNaN(num)) {
+                    $({ count: 0 }).animate({ count: num }, {
+                        duration: 1500,
+                        easing: 'swing',
+                        step: function () {
+                            if (fullText.includes('.')) {
+                                $this.text(this.count.toFixed(1) + suffix);
+                            } else {
+                                $this.text(Math.floor(this.count) + suffix);
+                            }
+                        },
+                        complete: function () {
+                            $this.text(fullText);
+                        }
+                    });
+                }
+            });
+        }
+    };
+    $(window).on('scroll', runStatsCounters);
+    runStatsCounters();
+
     // Initiate the wowjs
     new WOW().init();
 
