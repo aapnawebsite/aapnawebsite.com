@@ -32,13 +32,26 @@
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+        <!-- Starting Page / Cinematic Intro Splash Start -->
+    <div id="intro-splash" class="intro-splash-screen" role="dialog" aria-label="Welcome to aapnawebsite.com">
+        <div class="intro-glow-orb-1"></div>
+        <div class="intro-glow-orb-2"></div>
+        <div class="intro-content-wrap">
+            <div class="intro-logo-shell">
+                <img src="img/logo.png" alt="aapnawebsite logo">
+            </div>
+            <h1 class="intro-brand-title">
+                <span>aapnawebsite</span><span class="brand-dot-ext">.com</span>
+            </h1>
+            <p class="intro-brand-tagline">Crafting High-Performance Digital Experiences</p>
+            <div class="intro-progress-container">
+                <div class="intro-progress-fill"></div>
+            </div>
+            <span class="intro-status-text">Loading Experience...</span>
+            <button type="button" class="intro-skip-btn" id="intro-skip-btn">Enter Website &rarr;</button>
         </div>
     </div>
-    <!-- Spinner End -->
+    <!-- Starting Page / Cinematic Intro Splash End -->
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">

@@ -1,6 +1,26 @@
 (function ($) {
     "use strict";
 
+    // Starting Intro Page Handler
+    var dismissIntro = function () {
+        var splash = $('#intro-splash');
+        if (splash.length > 0 && !splash.hasClass('fade-out')) {
+            splash.addClass('fade-out');
+            setTimeout(function () {
+                splash.remove();
+            }, 850);
+        }
+    };
+
+    // Auto-dismiss intro page after animation completes (~2.2s)
+    setTimeout(dismissIntro, 2200);
+
+    // Click anywhere or skip button to enter immediately
+    $(document).on('click', '#intro-splash, #intro-skip-btn', function () {
+        dismissIntro();
+    });
+
+
     // Spinner
     var spinner = function () {
         setTimeout(function () {
