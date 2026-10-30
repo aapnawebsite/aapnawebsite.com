@@ -992,3 +992,189 @@
 .status-error {
   color: red;
 }
+
+/* ==========================================================================
+   PREMIUM GITHUB INTEGRATION & BRAND STYLING
+   ========================================================================== */
+
+/* Navbar Premium GitHub Button */
+.btn-premium-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 18px;
+    background: linear-gradient(135deg, #1f2328 0%, #161b22 100%);
+    color: #ffffff !important;
+    border: 1px solid rgba(187, 106, 235, 0.45);
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-decoration: none !important;
+    box-shadow: 0 4px 14px rgba(187, 106, 235, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-premium-github::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.6s ease;
+}
+
+.btn-premium-github:hover::before {
+    left: 120%;
+}
+
+.btn-premium-github:hover {
+    background: linear-gradient(135deg, #24292f 0%, #0d1117 100%);
+    border-color: #bb6aeb;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(187, 106, 235, 0.4), 0 0 12px rgba(187, 106, 235, 0.3);
+}
+
+.btn-premium-github i.fa-github {
+    font-size: 16px;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.btn-premium-github:hover i.fa-github {
+    transform: rotate(10deg) scale(1.15);
+}
+
+.btn-premium-github .gh-badge-pill {
+    background: rgba(187, 106, 235, 0.25);
+    color: #d896ff;
+    padding: 2px 7px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    border: 1px solid rgba(187, 106, 235, 0.4);
+}
+
+/* Footer GitHub Social Button */
+.footer .btn.btn-social.btn-social-gh {
+    background: #161b22;
+    border-color: rgba(187, 106, 235, 0.5);
+    color: #ffffff;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer .btn.btn-social.btn-social-gh:hover {
+    background: #bb6aeb;
+    border-color: #bb6aeb;
+    color: #ffffff !important;
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 6px 18px rgba(187, 106, 235, 0.55);
+}
+
+/* Premium Projects GitHub Showcase Card */
+.premium-gh-card {
+    background: linear-gradient(135deg, #181d38 0%, #121526 100%);
+    border: 1px solid rgba(187, 106, 235, 0.35);
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 24px;
+    position: relative;
+    box-shadow: 0 12px 32px rgba(24, 29, 56, 0.15), 0 4px 12px rgba(187, 106, 235, 0.1);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+}
+
+.premium-gh-card::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(187, 106, 235, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.premium-gh-card:hover {
+    border-color: #bb6aeb;
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(187, 106, 235, 0.25), 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.premium-gh-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.premium-gh-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #bb6aeb;
+    background: rgba(187, 106, 235, 0.12);
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(187, 106, 235, 0.3);
+}
+
+.premium-gh-tag i {
+    font-size: 13px;
+}
+
+.premium-gh-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.premium-gh-desc {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 16px;
+}
+
+.premium-gh-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #bb6aeb 0%, #9325d3 100%);
+    color: #ffffff !important;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none !important;
+    border: none;
+    box-shadow: 0 4px 14px rgba(187, 106, 235, 0.35);
+    transition: all 0.3s ease;
+}
+
+.premium-gh-btn:hover {
+    background: linear-gradient(135deg, #caa3f2 0%, #bb6aeb 100%);
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(187, 106, 235, 0.5);
+}
+
+.premium-gh-btn .gh-arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.premium-gh-btn:hover .gh-arrow-icon {
+    transform: translateX(4px);
+}
