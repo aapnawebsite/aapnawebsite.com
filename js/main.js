@@ -135,40 +135,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /*** DARK MODE END ***/
 
-!-- EmailJS
-
-
-
+// EmailJS Contact Form Handler
 document.addEventListener("DOMContentLoaded", function () {
+  if (typeof emailjs !== "undefined") {
+    try {
+      emailjs.init("K70-YYx5nUXFqVyuf");
+    } catch(err) {
+      console.warn("EmailJS init note:", err);
+    }
+  }
 
-  emailjs.init("K70-YYx5nUXFqVyuf");
+  var form = document.getElementById("contactForm");
+  var statusMsg = document.getElementById("form-status");
 
-  const form = document.getElementById("contactForm");
-  const statusMsg = document.getElementById("form-status");
+  if (form && statusMsg) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+      statusMsg.style.display = "block";
+      statusMsg.className = "status-msg";
+      statusMsg.textContent = "Sending message...";
 
-    statusMsg.style.display = "block";
-    statusMsg.className = "status-msg";
-    statusMsg.textContent = "Sending message...";
+      if (typeof emailjs !== "undefined") {
+        var serviceID = "service_xtlwz5j";
+        var templateID = "template_f3l6h8g";
 
-    const serviceID = "service_xtlwz5j";
-    const templateID = "template_f3l6h8g";
-
-    emailjs.sendForm(serviceID, templateID, this)
-      .then(() => {
-        statusMsg.textContent = "Message sent successfully!";
+        emailjs.sendForm(serviceID, templateID, this)
+          .then(function() {
+            statusMsg.textContent = "Message sent successfully! Our team will contact you soon.";
+            statusMsg.classList.add("status-success");
+            form.reset();
+          })
+          .catch(function(err) {
+            console.error(err);
+            statusMsg.textContent = "Error sending message. Please reach us via WhatsApp or Email directly!";
+            statusMsg.classList.add("status-error");
+          });
+      } else {
+        statusMsg.textContent = "Thank you! Please contact us directly via WhatsApp (+91894330609) or email.";
         statusMsg.classList.add("status-success");
         form.reset();
-      })
-      .catch((err) => {
-        console.error(err);
-        statusMsg.textContent = "Error sending message. Try again!";
-        statusMsg.classList.add("status-error");
-      });
-  });
-
+      }
+    });
+  }
 });
-
-
